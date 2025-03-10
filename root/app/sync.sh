@@ -8,6 +8,10 @@ fi
 
 set -e
 
+if [ -n "$SHOWVERSION" ]; then
+	mbsync -v
+fi
+
 mbsync -V -a -c /config/mbsync.rc
 
 echo "INFO: Completed sync.sh PID $$ $(date)"
